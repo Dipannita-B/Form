@@ -1,0 +1,143 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: grey;/*provide a background image*/
+    background-position: center;
+    background-size: cover ;
+}
+
+
+.container{
+    padding: 0;
+    width: 500px;
+    height: 600px;
+    margin: 8px auto;
+    background: #fff;
+    border-radius: 5px;;
+    position: relative;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+h3{
+    text-align: center;
+    margin-bottom: 40px;
+    color: #777;
+    
+
+}
+
+form{
+    width: 400px;
+    position: absolute;
+    
+
+}
+section{
+    width: 400px;
+    position: absolute;
+    top:100px;
+    left: 40px;
+
+}
+
+
+form input,select,textarea
+{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+::placeholder{
+    color: #777;
+}
+.btn-box{
+    width: 100%;
+    margin: 5px auto;
+    text-align: center;
+    
+}
+
+form button{
+    width : 110px;
+    height: 35px;
+    margin: 0 10px;
+    background: linear-gradient(to right,#1034ff,#b61d31);
+    border-radius: 20px;
+    border: 0;
+    outline: none;
+    color: #fff;
+    text-align: center;
+
+
+}
+
+
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+ 
+#form2{
+    left: 500px;
+
+}
+
+#form3{
+    left: 500px;
+
+}
+
+#form4{
+    left: 500px;
+
+}
+.required {
+  color: red;
+}
+
+.heading{
+        
+padding: 20px;
+background-color: purple;
+height: auto;
+display: block;
+width:100%;
+overflow:hidden;
+text-align: center;
+font-size: 30px;
+font-family: sans-serif;
+text-decoration: double;
+color:white;
+}
+
+
+

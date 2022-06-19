@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Application form</title>
+    <link rel="stylesheet" href="" th:href="@{/style.css}">
+</head>
+<body>
+    <div class="heading">
+        <strong>FORM</strong>
+    </div>
+    <div class="container">
+
+        <form id="form" th:action="@{/studentdata}" method="post" th:object="${student}">
+            <section id="form1">
+            <h3>PERSONAL INFORMATION</h3>
+            <div class="row">
+                <div class="col-25">
+                    <label for="name" id="name-label">Name<span aria-hidden="true" class="required">*</span></label>
+                </div>
+
+                <div class="col-75">
+                    <input type="text" th:field="*{name}" id="validate1" placeholder="Enter your name" required ></input>
+                </div>
+            </div>
+            <br>
+
+
+            <div class="row">
+                <div class="col-25">
+                    <label>DOB <span aria-hidden="true" class="required">*</span></label>
+                </div>
+
+                <div class="col-75">
+                    <input type="date" id="dob" th:field="*{dob}">
+                </div>
+            </div>
+
+            <br>
+            <div class="row">
+                <div class="col-25">
+                    <label for="dropdown">Gender</label>
+                </div>
+
+                <div class="col-75">
+                    <select id="dropdown" th:field="*{gender}">
+                        <option value="Female">Female</option>
+                        <option value="Male">Male</option>
+                        <option value="Other">other</option>
+                    </select>
+                </div>
+            </div>
+
+            <br>
+            <br>
+            <br>
+
+            <div class="btn-box">
+                <button type="button" id="next1">Next</button>
+            </div>
+
+        </section>
+
+
+        <section id="form2">
+
+            <h3>ADDRESS</h3>
+            <div class="row">
+                <div class="col-25">
+                    <label for="Permanent Address" id="Permanent Address">Permanent Address<span aria-hidden="true" class="required">*</span></label>
+                </div>
+
+                <div class="col-75">
+            <!--input type="text" id="Permanent Address" placeholder="Enter your Permanent Address" cols="50" rows="5" required></input><br-->
+                    <textarea id="validate2" th:field="*{paddress}" class="md-textarea form-control" cols="auto" rows="5" placeholder="Enter your Permanent Address" required></textarea>
+                </div>
+            </div>
+
+            
+            <div class="row">
+                <div class="col-25">
+                    <label for="Current Address" id="Current Address">Current Address</label>
+                </div>
+                
+                <div class="col-75">
+                    <!--input type="text" id="Current Address" placeholder="Enter your Current Address" cols="50" rows="5" ></input><br-->
+                    
+                    <textarea id="address" th:field="*{caddress}" class="md-textarea form-control" cols="auto" rows="5" placeholder="Enter your Current Address" ></textarea>
+              
+                </div>
+
+            </div>
+            <br>
+            <br>
+            
+            <div class="btn-box">
+                <button type="button" id="back1">Back</button>
+                <button type="button" id="next2">Next</button>
+
+            </div>
+        </section>
+
+        <section id="form3">
+            <h3>ACADEMICS</h3>
+
+            <div class="row">
+
+                <div class="col-25">
+                    <label>Highest Degree</label>
+                </div>
+
+
+                <div class="col-75">
+                    <select id="deg" th:field="*{degree}">
+                        <option value="Post Graduation">Post Graduation</option>
+                        <option value="Graduation">Graduation</option>
+                        <option value="Higher Secondary">Higher Secondary</option>
+                        <option value="Secondary">Secondary</option>
+                    </select>
+                </div>
+            </div>   
+                <br>
+
+            <div class="row">
+                <div class="col-25">
+                    <label>University<span aria-hidden="true" class="required">*</span></label>
+                </div>
+          
+                <div class="col-75">
+                    <input type="text" th:field="*{clg}" id="validate3" placeholder="University/instituition">
+                </div>
+            </div>
+
+
+          <br>
+          <div class="row">
+                <div class="col-25">
+                    <label>Grade<span aria-hidden="true" class="required">*</span></label>
+                </div>
+                <div class="col-75">
+                    <input type="number" th:field="*{grade}" id="grade" placeholder="Grade/Percentage">
+                </div>
+            </div>
+
+
+          <br>
+            <div class="row">
+                <div class="col-25">
+                     <label>Year of Passing </label>
+                </div>
+                <div class="col-75">
+                    <input type="date" th:field="*{passing}" id="year">
+                </div>
+            </div>
+                <br><br><br>
+
+
+
+          <div class="btn-box">
+            <button type="button" id="back2">Back</button>
+            <button type="button" id="next3">Next</button>
+
+
+        </div>
+        </section>
+
+        <section id="form4">
+
+            <h3>Extra information</h3>
+
+            <div class="row">
+                <div class="col-25">
+                    <label>Contact number<span aria-hidden="true" class="required">*</span></label>
+                </div>
+
+                <div class="col-75">
+                    <input type="text" th:field="*{ph}"id="validate" placeholder="Enter your phone number"><br><br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label>Email id <span aria-hidden="true" class="required">*</span></label>
+                </div>
+
+                <div class="col-75">
+                    <input type="email" th:field="*{email}" id="validate4" placeholder="Enter your Email">
+                </div>
+            </div>
+
+                <br><br>
+
+            <div class="row">
+                <div class="col-25">
+          <label>Hobbies</label>
+            
+            </div>
+            
+            <div class="col-75">
+                <textarea id="hobby" th:field="*{hobby}" placeholder="Enter your hobbies"></textarea>
+                
+                </div>
+                </div>
+                <br><br>
+        <br>
+        
+        <div class="btn-box">
+            <button type="button" id="back3">Back</button>
+            <button type="submit" id="submit">Submit</button>
+        </div>
+        </section>
+        </form>
+        
+    </div>
+
+<script src="" th:src="@{/myjs.js}"></script>
+</body>
+</html>
